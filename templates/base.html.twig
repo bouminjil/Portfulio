@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Welcome To my PortFulio{% endblock %}</title>
+
+        {% block meta %}
+          {% include 'include/meta.html.twig' %}
+        {% endblock %}
+
+        {% block stylesheets %}
+            {% include 'include/stylesheets.html.twig' %}
+        {%  endblock %}
+    </head>
+    <body>
+        {% block body %}
+
+            {% block header %}
+                {% include 'include/header.html.twig' %}
+            {% endblock %}
+
+            {% block Content %}
+                {% include 'include/contenu.html.twig' %}
+            {% endblock %}
+
+            {%  block Javascript %}
+                {% include 'include/javascript.html.twig' %}
+            {% endblock %}
+
+            {% block contact %}
+                {%  include 'include/contact.html.twig' %}
+
+            {% endblock %}
+        {% endblock %}
+
+        {%  block footer %}
+            {% include 'include/footer.html.twig' %}
+        {%  endblock %}
+    </body>
+
+</html>
